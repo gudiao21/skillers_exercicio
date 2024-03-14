@@ -4,10 +4,10 @@
 
 Este projeto é parte do curso Skill.dev e tem como objetivo desenvolver um programa interativo em Ruby que solicita ao usuário a idade e determina em qual categoria ela se encaixa. O exercício consiste em:
 
-- Se a idade for menor que 13, imprimir "Criança".
-- Se a idade for entre 13 e 17 (inclusive), imprimir "Adolescente".
-- Se a idade for entre 18 e 64 (inclusive), imprimir "Adulto".
-- Se a idade for 65 ou mais, imprimir "Idoso".
+- Se a idade for menor que 13, imprimir "Child".
+- Se a idade for entre 13 e 17 (inclusive), imprimir "teenager".
+- Se a idade for entre 18 e 64 (inclusive), imprimir "Adult".
+- Se a idade for 65 ou mais, imprimir "Elderly".
 
 ## Estrutura do Projeto
 
