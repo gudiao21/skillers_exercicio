@@ -2,12 +2,7 @@
 
 ## Sobre o Projeto
 
-Este projeto é parte do curso skill.dev e tem como objetivo desenvolver um programa interativo em Ruby que solicita ao usuário a idade e determina em qual categoria ela se encaixa. O exercício consiste em:
-
-- Se a idade for menor que 13, imprimir "Criança".
-- Se a idade for entre 13 e 17 (inclusive), imprimir "Adolescente".
-- Se a idade for entre 18 e 64 (inclusive), imprimir "Adulto".
-- Se a idade for 65 ou mais, imprimir "Idoso".
+Este projeto é parte do curso skill.dev e tem como objetivo desenvolver um programa interativo em Ruby que solicita ao usuário um número e determina se é positivo ou negativo. O exercício consiste em:
 
 Solicite um número ao usuário.
 - Se number é positivo imprima 'Positivo'
@@ -56,7 +51,7 @@ $ ruby lib/main.rb
 
 ## Implementação da Lógica
 
-O arquivo `lib/positive_number_checker.rb` contém a função `positive_number_checker(number)` que deve ser implementada para determinar a categoria com base na idade.
+O arquivo `lib/positive_number_checker.rb` contém a função `positive_number_checker(number)` que deve ser implementada para determinar se é positivo, negativo ou neutro.
 
 ```ruby
 # lib/positive_number_checker.rb
@@ -76,19 +71,35 @@ Os testes para a função `positive_number_checker` estão definidos no arquivo 
 require 'spec_helper'
 require_relative '../lib/positive_number_checker'
 
-describe 'Category for age' do
-  describe '.positive_number_checker' do
-    it 'does return child(criança)' do
-      expect(positive_number_checker(5)).to eq('child')
+RSpec.describe '#positive_number_checker' do
+  context 'when the number is positive' do
+    it 'returns "Positivo"' do
+      result = positive_number_checker(5)
+      expect(result).to eq('Positivo')
     end
-    it 'does return teenager(adolescente)' do
-      expect(positive_number_checker(15)).to eq('teenager')
+
+    it 'returns "Positivo" for decimal numbers' do
+      result = positive_number_checker(3.14)
+      expect(result).to eq('Positivo')
     end
-    it 'does return adult(adulto)' do
-      expect(positive_number_checker(30)).to eq('adult')
+  end
+
+  context 'when the number is negative' do
+    it 'returns "Negativo"' do
+      result = positive_number_checker(-7)
+      expect(result).to eq('Negativo')
     end
-    it 'does return elderly(idoso)' do
-      expect(positive_number_checker(70)).to eq('elderly')
+
+    it 'returns "Negativo" for decimal numbers' do
+      result = positive_number_checker(-2.5)
+      expect(result).to eq('Negativo')
+    end
+  end
+
+  context 'when the number is zero' do
+    it 'returns "Negativo" for zero' do
+      result = positive_number_checker(0)
+      expect(result).to eq('Negativo')
     end
   end
 end

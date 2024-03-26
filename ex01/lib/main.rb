@@ -3,7 +3,8 @@ require_relative 'typing'
 
 def main
   age = typing_age
-  category_age(age)
+  category = category_age(age)
+  puts "categoria: #{category}"
 end
 
 main

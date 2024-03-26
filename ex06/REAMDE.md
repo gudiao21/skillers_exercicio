@@ -2,12 +2,13 @@
 
 ## Sobre o Projeto
 
-Este projeto faz parte do curso skill.dev e tem como objetivo desenvolver um programa em Ruby que solicita ao usuário inserir três números e verifica o maior número. O exercício consiste em:
+Este projeto faz parte do curso skill.dev e tem como objetivo desenvolver um programa em Ruby que solicita ao usuário uma nota e verifica se o aluno foi aprovado ou não. O exercício consiste em:
 
-Maior de Três Números:
+Aluno aprovado ou não:
 
-- Solicite ao usuário três números.
-- Determine e imprima o maior dos três números.
+- Solicite ao usuário uma nota;
+- Se a nota for maior ou igual a 6, está aprovado;
+- Se a nota for menor que 6 está reprovado.
 
 ## Estrutura do Projeto
 
