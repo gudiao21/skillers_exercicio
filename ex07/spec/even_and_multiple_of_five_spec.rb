@@ -15,6 +15,12 @@ describe 'Check Number' do
     end
   end
 
+  context 'when the number is odd' do
+    it 'returns "O número é ímpar."' do
+      expect(check_number(25)).to eq('O número é ímpar. O número é múltiplo de 5.')
+    end
+  end
+
   context 'when the number is a multiple of 5' do
     it 'returns "O número é múltiplo de 5."' do
       expect(check_number(10)).to eq('O número é par. O número é múltiplo de 5.')
